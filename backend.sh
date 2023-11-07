@@ -17,7 +17,7 @@ echo -e "${color} copy Backend Service File \e[0m"
 cp backend-dev.service /etc/systemd/system/backend.service &>>log_file
 echo $?
 
-echo -e"${color} Add Application user \e[0m"
+echo -e "${color} Add Application user \e[0m"
 useradd expense &>>log_file
 echo $?
 
