@@ -108,7 +108,7 @@ fi
 echo -e "${color} Starting Backend Service \e[0m"
 systemctl daemon-reload &>>$log_file
 systemctl enable backend &>>$log_file
-systemctl start backend  &>>$log_filels
+systemctl start backend  &>>$log_file
 if [ $? -eq 0 ]; then
   echo -e "\e[32m SUCCESS \e[0m"
  else
