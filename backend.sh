@@ -44,7 +44,7 @@ if [ $? -ne 0 ]; then
  else
    echo -e "\e[31m FAILURE \e[0m"
 fi
-
+fi
 
 if [ ! -d /app ]; then
   echo -e "${color} Create Application Directory \e[0m"
