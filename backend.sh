@@ -84,7 +84,7 @@ if [ $? -eq 0 ]; then
 fi
 
 echo -e "${color} Install MySQL Client to Load Schema \e[0m"
-dnf install &>>log_file
+dnf install mysql -y &>>log_file
 if [ $? -eq 0 ]; then
   echo -e "\e[32m SUCCESS \e[0m"
  else
