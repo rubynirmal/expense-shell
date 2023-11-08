@@ -1,5 +1,5 @@
 [Unit]
-Description = Backend-dev.Service
+Description = Backend
 
 [Service]
 User=expense
