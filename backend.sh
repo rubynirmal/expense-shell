@@ -27,7 +27,7 @@ if [ $? -eq 0 ]; then
 fi
 
 echo -e "${color} copy Backend Service File \e[0m"
-cp backend-dev.service /etc/systemd/system/backend.service &>>log_file
+cp backend.service /etc/systemd/system/backend.service &>>log_file
 if [ $? -eq 0 ]; then
   echo -e "\e[32m SUCCESS \e[0m"
  else
