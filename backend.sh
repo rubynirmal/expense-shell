@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 log_file="/tmp/expense.log"
@@ -88,14 +87,5 @@ echo \-e "</span>{color} Extract Application content \e[0m"
 cd /app &>> $log_file
 unzip /tmp/backend.zip &>> $log_file
 
-if [ <span class="math-inline">? \-eq 0 \]; then
-echo \-e "\\e\[32 SUCCESS \\e\[0m"
-else
-echo \-e "\\e\[31m FAILURE \\e\[0m"
-echo "Failed to extract application content\. Check log file for details\."
-exit 1
-fi
-echo \-e "</span>{color} Download NodeJS Dependencies \e[0m"
-npm install &>> $log_file
-
-if [ $?
+if [ $? -eq 0 ]; then
+  echo -e "\e[32 SUCCESS \e
