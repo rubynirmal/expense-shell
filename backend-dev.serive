@@ -1,11 +1,11 @@
 [Unit]
-Description = Backend Service
+Description = Backend-dev. Service
 
 [Service]
 User=expense
 Environment=DB_HOST="mysql-dev.rubydevops.cloud"
 ExecStart=/bin/node /app/index.js
-SyslogIdentifier=backend
+SyslogIdentifier=backend-dev.service
 
 [Install]
 WantedBy=multi-user.target
