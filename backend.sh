@@ -113,3 +113,4 @@ if [ $? -eq 0 ]; then
  else
    echo -e "\e[31m FAILURE \e[0m"
 fi
+fi
