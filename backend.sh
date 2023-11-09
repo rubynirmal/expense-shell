@@ -5,7 +5,6 @@ if [ -z "$1" ]; then
   exit
  f1
 
-
 MYSQL_ROOT_PASSWORD=$1
 
 status_check() {
@@ -19,8 +18,6 @@ status_check() {
 echo -e "${color} Disable NodeJS default version \e[0m"
 dnf module disable nodejs -y &>>$log_file
 status_check
-
-
 
 echo -e "${color} Enable NodeJS 18 Version \e[0m"
 dnf module enable nodejs:18 -y &>>$log_file
