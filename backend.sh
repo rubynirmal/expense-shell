@@ -7,13 +7,14 @@ if [ -z "$1" ]; then
 
 
 MYSQL_ROOT_PASSWORD=$1
+
 status_check() {
   if [ $? -eq 0 ]; then
     echo -e "\e[32m SUCCESS \e[0m"
    else
      echo -e "\e[31m FAILURE \e[0m"
   fi
-  }
+}
 
 echo -e "${color} Disable NodeJS default version \e[0m"
 dnf module disable nodejs -y &>>$log_file
@@ -37,6 +38,7 @@ id expense &>>$log_file
 if [ $? -ne 0 ]; then
   echo -e "${color} Add Application user \e[0m"
   useradd expense &>>$log_file
+  password ExpenseApp@1 &>>$log_file
 status_check
 fi
 
