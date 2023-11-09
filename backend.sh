@@ -1,13 +1,19 @@
 source common.sh
 
-
-
 if [ -z "$1" ]; then
   echo password intput missing
   exit
  f1
 
+
 MYSQL_ROOT_PASSWORD=$1
+status_check() {
+  if [ $? -eq 0 ]; then
+    echo -e "\e[32m SUCCESS \e[0m"
+   else
+     echo -e "\e[31m FAILURE \e[0m"
+  fi
+  }
 
 echo -e "${color} Disable NodeJS default version \e[0m"
 dnf module disable nodejs -y &>>$log_file
