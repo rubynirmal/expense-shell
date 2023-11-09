@@ -3,7 +3,8 @@ source common.sh
 if [ -z "$1" ]; then
   echo password intput missing
   exit
- f1
+ fi
+
  MYSQL_ROOT_PASSWORD=$1
 
 echo -e "${color} Disable Mysql default version \e[0m"
@@ -26,6 +27,6 @@ status_check
 echo -e "${color} set MySQL password \e[0m"
 mysql_secure_installation --set-root-pass ${MYSQL_ROOT_PASSWORD} &>>$log_file
 status_check
-
+fi
 
 
