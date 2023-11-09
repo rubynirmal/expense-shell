@@ -38,7 +38,6 @@ id expense &>>$log_file
 if [ $? -ne 0 ]; then
   echo -e "${color} Add Application user \e[0m"
   useradd expense &>>$log_file
-  password ExpenseApp@1 &>>$log_file
 status_check
 fi
 
